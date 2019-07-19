@@ -1,0 +1,360 @@
+.player__container_controls-top {
+  width: 100%;
+  top: 0px;
+}
+
+.player__controls-top:hover {
+  opacity: 1;
+}
+
+.player__controls:hover {
+  opacity: 1;
+}
+
+.player__controls-top {
+  width: 100%;
+  height: 111px;
+  background-color: rgba(20, 20, 20, 0.8);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.player__container_controls {
+  width: 100%;
+  bottom: 0px;
+}
+
+.player__controls {
+  width: 100%;
+  height: 157px;
+  background-color: rgba(20, 20, 20, 0.8);
+  bottom: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.player__controls-top_text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.player__controls-top_text-bold {
+  font-weight: bold;
+}
+
+.player__controls-top_left-block {
+  margin-left: 30px;
+  text-align: left;
+  width: 100%;
+}
+.player__controls-top_right-block {
+  text-align: right;
+  width: 100%;
+  margin-right: 30px;
+}
+
+.player__controls_top-block {
+  display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 30px;
+}
+
+.player__controls_bottom-block {
+  display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 30px;
+}
+
+.player__controls_bottom-block-base {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.player__buffering-spinner {
+  position: absolute;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.player__time {
+  display: flex;
+  flex-grow: 0;
+  margin: 0 9px 0 0;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.player__time_text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: normal;
+  color: #FFFFFF;
+  line-height: 10px;
+}
+
+.player__button {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  width: 40px;
+  height: 56px;
+}
+
+.player__button_pause {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.player__button_play {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.player__button_left-line-icon {
+  background: url(/public/images/line.svg) no-repeat 50% 100%; 
+  width: 2px; 
+  height: 28px;
+  left:2px;
+}
+
+.player__button_left-icon {
+  background: url(/public/images/left.svg) no-repeat 50% 100%; 
+  width: 32px; 
+  height: 28px;
+}
+
+.player__button_play-icon {
+  background: url(/public/images/play.svg) no-repeat 50% 100%; 
+  width: 24px; 
+  height: 28px;
+  left: 12px;
+}
+
+.player__button_pause-icon {
+  background: url(/public/images/pause.svg) no-repeat 50% 100%; 
+  width: 24px; 
+  height: 28px;
+  left: 7px;
+}
+
+.player__button_right-icon {
+  background: url(/public/images/right.svg) no-repeat 50% 100%; 
+  width: 32px; 
+  height: 28px;
+  left: 5px;
+}
+
+.player__button_circle {
+  background: url(/public/images/circle.svg) no-repeat 50% 100%; 
+  width: 56px; 
+  height: 56px;
+  top: -46px;
+  left: -9px;
+  z-index:1;
+  position: relative;
+  display: none;
+}
+
+.player__button:hover .player__button_circle,
+.player__button.active .player__button_circle  {
+  display: block;
+}
+
+.player__icon {
+  display: inline-block;
+  position: relative;
+  z-index:2;
+}
+
+.player__seek-bar {
+  display: flex;
+  height: 7px;
+  margin: 0 12px 0 0;
+  padding: 0;
+
+  -webkit-appearance: none;
+
+  border: 1px solid #666;
+  border-radius: 4px;
+  background-color: black;
+  outline: none;
+}
+
+.player__seek-bar::-moz-range-track {
+  background-color: transparent;
+  outline: none;
+}
+
+.player__seek-bar::-ms-track, .player__seek-bar::-ms-fill-lower, .player__seek-bar::-ms-fill-upper {
+  background-color: transparent;
+  outline: none;
+}
+
+.player__seek-bar {
+  flex-grow: 1;
+}
+
+.player__seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: white;
+  outline: none;
+}
+.player__seek-bar::-moz-range-thumb {
+  background-color: white;
+  outline: none;
+}
+.player__seek-bar::-ms-thumb {
+  background-color: white;
+  outline: none;
+}
+
+.player__seek-bar::-webkit-slider-thumb {
+  width: 19px;
+  height: 19px;
+  border-radius: 8px;
+}
+.player__seek-bar::-moz-range-thumb {
+  width: 19px;
+  height: 19px;
+  border-radius: 8px;
+}
+.player__seek-bar::-ms-thumb {
+  width: 18px;
+  height: 11px;
+  border-radius: 8px;
+}
+
+.player__seek-bar::-ms-tooltip {
+  display: none;
+}
+
+.player__controls input[type="range"] {
+  cursor: pointer;
+}
+
+.player__button_pause, .player__buffering-spinner {
+  display: none;
+}
+
+.spinnerSvg {
+  animation: rotate 2s linear infinite;
+  height: 100%;
+  transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
+}
+
+.spinnerPath {
+  stroke: #d62d20;
+  stroke-dasharray: 20, 200;
+  stroke-dashoffset: 0;
+
+  animation:
+    dash 1.5s ease-in-out infinite,
+    color 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+@keyframes color {
+  100%, 0% {
+    stroke: #d62d20;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #008744;
+  }
+  80%, 90% {
+    stroke: #ffa700;
+  }
+}
+
+.player__controls_bottom-block-legens {
+  position: absolute;
+  display: flex;
+  right: 70px;
+  bottom: 25px;
+}
+
+.player__controls_bottom-block-legens-right {
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+.player__controls_bottom-block-legens-quality {
+  cursor: pointer;
+}
+
+.player__control_legend-quality-image {
+  background: url(/public/images/quality.svg) no-repeat 50% 100%; 
+  width: 32px; 
+  height: 28px;
+  left: 5px;
+  display: inline-block;
+}
+
+.player__control_legend-exit-image {
+  background: url(/public/images/exit.svg) no-repeat 50% 100%; 
+  width: 32px; 
+  height: 28px;
+  left: 5px;
+  display: inline-block;
+}
+
+.player__control_legend-text {
+  display: inline-block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: normal;
+  color: #FFFFFF;
+  line-height: 10px;
+}

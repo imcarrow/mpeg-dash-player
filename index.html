@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="node_modules/shaka-player/dist/shaka-player.compiled.js"></script>
+    <link rel="stylesheet" href="/public/css/app.css">
+    <link rel="stylesheet" href="/public/css/controls.css">
+
+    <script src="/src/control.js"></script>
+    <script src="/src/app.js"></script>
+    <script src="/src/videoIterator.js"></script>
+    <script src="/src/controlIterator.js"></script>
+</head>
+
+<body>
+    <div class="player">
+        <div id="videoContainer" class="player__container">
+            <div id="controlsTopContainer" class="player__container_controls-top">
+                <div id="controlsTop" class="player__controls-top" style="opacity: 1;">
+                    <div class="player__controls-top_left-block player__controls-top_text">
+                        <div>Now:</div>
+                        <div id="controlsTopNameVideoCurrent" class="player__controls-top_text-bold">
+                            The name of the current video
+                        </div>
+                    </div>
+                    <div class="player__controls-top_right-block player__controls-top_text">
+                        <div>Next:</div>
+                        <div id="controlsTopNameVideoNext" class="player__controls-top_text-bold">
+                            The name of the next video
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bufferingSpinner" class="player__buffering-spinner">
+                <svg class="spinnerSvg" viewBox="25 25 50 50">
+                    <circle class="spinnerPath" cx="50" cy="50" r="20" fill="none" stroke-width="2"
+                        stroke-miterlimit="10">
+                    </circle>
+                </svg>
+            </div>
+            <video id="video" class="player__video" poster="/public/images/video.png" autoplay>
+            </video>
+            <div id="controlsContainer" class="player__container_controls">
+                <div id="controls" class="player__controls" style="opacity: 1;">
+                    <div class="player__controls_top-block">
+                        <div id="currentTime" class="player__time player__time_text">0:00</div>
+                        <input id="seekBar" class="player__seek-bar" type="range" step="any" min="0" max="0" value="0">
+                        <div id="durationTime" class="player__time player__time_text">0:00</div>
+                    </div>
+                    <div class="player__controls_bottom-block">
+                        <div class="player__controls_bottom-block-base">
+                            <div id="previousButton" class="player__button">
+                                <div class="player__button_left-line-icon player__icon"></div>
+                                <div class="player__button_left-icon player__icon"></div>
+                                <div class="player__button_circle"></div>
+                            </div>
+                            <div id="rewindButton" class="player__button">
+                                <div class="player__button_left-icon player__icon"></div>
+                                <div class="player__button_circle"></div>
+                            </div>
+                            <div id="playButton" class="player__button player__button_play">
+                                <div class="player__button_play-icon player__icon"></div>
+                                <div class="player__button_circle"></div>
+                            </div>
+                            <div id="pauseButton" class="player__button player__button_pause">
+                                <div class="player__button_pause-icon player__icon"></div>
+                                <div class="player__button_circle"></div>
+                            </div>
+                            <div id="forwardButton" class="player__button">
+                                <div class="player__button_right-icon player__icon"></div>
+                                <div class="player__button_circle"></div>
+                            </div>
+                            <div id="nextButton" class="player__button">
+                                <div class="player__button_right-icon player__icon"></div>
+                                <div class="player__button_left-line-icon player__icon"></div>
+                                <div class="player__button_circle"></div>
+                            </div>
+                        </div>
+                        <div class="player__controls_bottom-block-legens">
+                            <div id="legendQuality" class="player__controls_bottom-block-legens-quality">
+                                <div class="player__control_legend-quality-image"></div>
+                                <div id="legendQualityText" class="player__control_legend-text">switch quality (Y)</div>
+                            </div>
+                            <div id="legendExit" class="player__controls_bottom-block-legens-right">
+                                <div class="player__control_legend-exit-image"></div>
+                                <div class="player__control_legend-text">back (R)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

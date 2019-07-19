@@ -1,0 +1,13 @@
+{
+    "items":
+    [
+        {
+            "name": "Video 1",
+            "manifestUri": "https://demo.unified-streaming.com/video/tears-of-steel/tears-of-steel.ism/.mpd"
+        },
+        {
+            "name": "Video 2",
+            "manifestUri": "http://demo.unified-streaming.com/video/ateam/ateam.ism/ateam.mpd"
+        }
+    ]
+}

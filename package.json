@@ -1,0 +1,17 @@
+{
+  "name": "mpeg-dash-player",
+  "version": "1.0.0",
+  "description": "player for streaming video MPEG-DASH",
+  "main": "index.html",
+  "license": "GNU",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imcarrow/mpeg-dash-player"
+  },
+  "dependencies": {
+    "shaka-player": "^2.5.0-beta3"
+  }
+}
